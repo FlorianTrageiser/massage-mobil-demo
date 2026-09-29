@@ -156,3 +156,14 @@ p{margin:0}
   .timeline .courses{font-size:16px}
   .btns .btn{width:100%}
 }
+
+/* Impressum und Datenschutz */
+.legal-text{max-width:900px;display:flex;flex-direction:column;gap:14px}
+.legal-text h1{margin-top:8px}
+.legal-text h1#datenschutz{margin-top:48px;scroll-margin-top:90px}
+.legal-text h2{font-size:clamp(24px,2.2vw,30px);margin-top:24px}
+.legal-text h3{font-size:21px;margin-top:12px}
+.legal-text h4{font-family:var(--sans);font-size:17px;margin:8px 0 0}
+.legal-text p,.legal-text li{font-size:16px;color:var(--muted);overflow-wrap:anywhere}
+.legal-text ul{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:6px}
+.legal-text ul ul{margin-top:6px}
