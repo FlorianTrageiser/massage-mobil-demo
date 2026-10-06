@@ -103,7 +103,12 @@ p{margin:0}
 .timeline .year{font-family:var(--serif);font-size:22px;font-weight:600;color:var(--btn);text-align:right;padding-top:2px}
 .timeline .axis{display:flex;flex-direction:column;align-items:center}
 .timeline .dot{width:16px;height:16px;margin-top:8px;border-radius:999px;background:var(--bg);box-shadow:0 0 0 4px var(--soft),0 0 0 6px var(--btn);flex-shrink:0}
-.timeline li:first-child .dot{background:var(--btn)}
+.timeline li.aktuell .dot{background:var(--btn)}
+/* geplante, noch nicht abgeschlossene Ausbildung */
+.timeline li.geplant .dot{width:28px;height:28px;margin-top:2px;background:var(--soft);box-shadow:none;border:2px dashed var(--btn)}
+.timeline li.geplant .axis::after{background:repeating-linear-gradient(to bottom,#C9B6D1 0 6px,transparent 6px 11px)}
+.timeline li.geplant .year{opacity:.55}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .timeline .axis::after{content:"";width:2px;flex-grow:1;background:#C9B6D1}
 .timeline li:last-child .axis::after{background:transparent}
 .timeline .courses{padding-bottom:28px;display:flex;flex-direction:column;gap:6px;font-size:18px;font-weight:600}
@@ -181,3 +186,100 @@ p{margin:0}
 .legal-toc nav a{padding:8px 0 8px 16px;text-decoration:none;font-weight:600;font-size:15px;color:var(--muted)}
 .legal-toc nav a:hover{color:var(--btn)}
 @media (max-width:960px){.legal-toc{position:static}}
+
+/* ---------- Ergänzungen Oktober 2026 ---------- */
+.demo-bar a{color:var(--onDark);font-weight:700}
+.logo{flex-direction:row;align-items:center;gap:12px}
+.logo img{height:43px;width:auto;mix-blend-mode:multiply}
+.logo-txt{display:flex;flex-direction:column;gap:2px}
+.foot-brand{display:flex;align-items:center;gap:18px}
+.foot-brand img{width:112px;height:112px;border-radius:20px;background:#FBF9F5}
+.nav a{white-space:nowrap}
+.foot-links{display:flex;flex-wrap:wrap;gap:12px 24px}
+.hinweis{background:#FFF4C9;color:#5A4500;border-radius:12px;padding:12px 16px;font-size:15px;font-weight:600;line-height:1.5}
+.liste{margin:6px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:4px}
+.angebote .card-img img{height:180px}
+.angebote .card-img .body{padding:22px}
+.angebote .card-img .row{flex-wrap:wrap;gap:6px 12px}
+.hinweise{gap:28px 48px;align-items:start}
+.card a{color:var(--btn);font-weight:700}
+
+/* Aktuelles */
+.news{display:grid;grid-template-columns:180px minmax(0,1fr);gap:28px;padding:26px;border-radius:20px;background:#fff;border:1px solid var(--line)}
+.news-date{display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.news-date b{font-family:var(--serif);font-weight:600;font-size:20px;color:var(--btn);line-height:1.3}
+.news-tag{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--main);background:var(--soft2);padding:4px 10px;border-radius:999px}
+.news-ort{font-weight:600;color:var(--main);font-size:15px}
+
+/* Beratung */
+.fakten{display:flex;flex-direction:column;gap:14px;padding:22px;border-radius:20px;background:var(--bg);border:1px solid var(--line);margin-top:8px}
+.fakten div{display:flex;flex-direction:column;gap:2px}
+.fakten span{font-size:15px}
+.prosa{gap:18px;max-width:680px;min-width:0}
+.prosa p{font-size:18px;line-height:1.7;color:var(--muted)}
+.prosa h3{font-size:22px;margin-top:6px}
+.zitat{margin:0;font-family:var(--serif);font-size:clamp(24px,2.4vw,32px);color:var(--btn);line-height:1.3}
+.haken{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 24px}
+.haken li{position:relative;padding-left:28px;font-size:16px;line-height:1.5}
+.haken li::before{content:"";position:absolute;left:2px;top:.35em;width:14px;height:8px;border-left:2px solid var(--main);border-bottom:2px solid var(--main);transform:rotate(-45deg)}
+
+/* Partner */
+.partner{text-decoration:none;color:var(--text);gap:14px}
+.partner h3{font-size:24px}
+.partner-logo{width:72px;height:72px;border-radius:999px;background:var(--soft);color:var(--btn);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:24px;font-weight:600}
+.partner-ort{font-size:14px;font-weight:600;color:var(--main)}
+
+/* Unterlagen */
+.doc{display:flex;align-items:center;gap:18px;padding:18px 20px;border-radius:18px;background:var(--bg)}
+.doc .stack{flex:1}
+.doc-ico{width:48px;height:56px;flex-shrink:0;border-radius:8px;border:2px solid var(--main);color:var(--main);font-size:12px;font-weight:700;display:flex;align-items:flex-end;justify-content:center;padding-bottom:8px}
+.doc-btn{opacity:.5;cursor:not-allowed}
+
+/* Offene Fragen */
+.todo{margin:0;padding:0;list-style:none;counter-reset:todo;display:flex;flex-direction:column}
+.todo li{counter-increment:todo;display:grid;grid-template-columns:40px minmax(0,1fr) auto;gap:16px;align-items:start;padding:16px 0;border-top:1px solid var(--line)}
+.todo li::before{content:counter(todo);width:32px;height:32px;border-radius:999px;background:#FFF4C9;color:#5A4500;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:15px}
+.todo .more{white-space:nowrap;font-size:15px;padding-top:2px}
+
+.logo{flex-shrink:0}
+.logo-txt b,.logo-txt span{white-space:nowrap}
+@media (max-width:1760px){ .logo-txt>span{display:none} .nav{gap:22px} }
+@media (max-width:1440px){
+  .menu-btn{display:flex}
+  .nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--bg);border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0;padding:8px var(--pad) 20px}
+  .nav.open{display:flex}
+  .nav a{padding:14px 0;border-bottom:1px solid var(--line);font-size:18px}
+  .nav .btn{margin-top:14px;border-bottom:0}
+}
+@media (max-width:1100px){ .angebote{grid-template-columns:repeat(2,minmax(0,1fr))} }
+@media (max-width:960px){
+  .logo img{height:36px}
+  .hinweise{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  .angebote{grid-template-columns:1fr}
+  .news{grid-template-columns:1fr;gap:14px;padding:22px}
+  .haken{grid-template-columns:1fr}
+  .todo li{grid-template-columns:36px minmax(0,1fr)}
+  .todo .more{grid-column:2}
+  .doc{flex-wrap:wrap}
+}
+
+/* Fragen im Menü, PayPal, echte Bewertungen, Partner-Logos */
+.nav a.nav-fragen{background:#FFF4C9;color:#5A4500;border-radius:999px;padding:6px 14px;font-weight:700}
+.nav a.nav-fragen[aria-current="page"]{box-shadow:inset 0 0 0 2px #E8C95A}
+.todo-info li::before{content:"i";background:var(--soft2);color:var(--main);font-family:var(--serif);font-style:italic}
+.paypal{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;padding:28px;border-radius:20px;background:var(--bg);border:1px solid var(--line)}
+.paypal .stack{max-width:560px}
+.btn-paypal{background:#FFC439;color:#1F2A44}
+.review-top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.review-thema{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--main)}
+.review-text{font-family:var(--serif);font-size:19px;line-height:1.45}
+.partner-logo{background:#fff;border:1px solid var(--line);overflow:hidden;padding:8px}
+.partner-logo img{width:100%;height:100%;object-fit:contain}
+@media (max-width:1440px){ .nav a.nav-fragen{border-radius:12px;padding:14px 14px;margin-top:8px;border-bottom:0} }
+@media (min-width:1441px){ .nav{gap:22px} }
+@media (min-width:1441px) and (max-width:1760px){ .nav{gap:18px} }
+.dl-link{display:inline-flex;align-items:center;gap:6px;margin-top:6px;font-weight:700;color:var(--btn);text-decoration:underline;text-underline-offset:3px}
+.dl-link::before{content:"↓";text-decoration:none}
+.inline-link{color:var(--btn);font-weight:700;text-decoration:underline;text-underline-offset:3px}
