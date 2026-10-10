@@ -9,20 +9,63 @@
 <link rel="icon" href="bilder/logo-zeichen.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Nunito+Sans:wght@400;600;700&family=Parisienne&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<script>try{var q=new URLSearchParams(location.search),f=q.get('farbe')||localStorage.getItem('farbe'),l=q.get('logo')||localStorage.getItem('logo');if(f==='gruen')document.documentElement.dataset.farbe='gruen';if(l&&l!=='bisher')document.documentElement.dataset.logo=l}catch(e){}</script>
+<style>.logo-mark{display:none;line-height:0}.logo-mark svg,.logo-mark img{display:block}html:not([data-logo]) .logo-mark[data-logo="bisher"],html[data-logo="ma-pastell"] .logo-mark[data-logo="ma-pastell"],html[data-logo="kreis"] .logo-mark[data-logo="kreis"],html[data-logo="blatt"] .logo-mark[data-logo="blatt"],html[data-logo="schwung"] .logo-mark[data-logo="schwung"],html[data-logo="geborgen"] .logo-mark[data-logo="geborgen"],html[data-logo="stempel"] .logo-mark[data-logo="stempel"]{display:inline-block}.lm-gruen{display:none!important}html[data-farbe="gruen"] .lm-gruen{display:block!important}html[data-farbe="gruen"] .lm-flieder{display:none!important}</style>
 </head>
 <body>
-<div class="demo-bar">Entwurf der neuen Webseite · Gelb markiert sind Fragen an dich · <a href="fragen.html">Alle offenen Fragen</a></div>
+<div class="demo-bar">Entwurf der neuen Webseite · Gelb markiert sind Fragen an dich · <a href="fragen.html">Alle offenen Fragen</a><span class="farb-wahl" role="group" aria-label="Farbe ausprobieren">Farbe: <button type="button" data-f="flieder">Flieder ★ Empfehlung</button><button type="button" data-f="gruen">Pastellgrün</button></span><label class="logo-wahl">Logo: <select><option value="bisher">Bisher</option><option value="ma-pastell">Entwurf 1: Bisheriges MA (Pastell)</option><option value="kreis">Entwurf 2: Kreis mit Zweig</option><option value="blatt">Entwurf 3: Blatt</option><option value="schwung">Entwurf 4: Schwungvolles A</option><option value="geborgen">Entwurf 5: Geborgen</option><option value="stempel">Entwurf 6: Rundes Siegel</option></select></label></div>
 <header class="site-header">
 <div class="wrap">
-<a class="logo" href="index.html"><img src="bilder/logo-zeichen.jpg" alt="" width="72" height="43"><span class="logo-txt"><b>Massage Mobil</b><span>Manuela Altmann · Mobile Wellnessmassagen</span></span></a>
+<a class="logo" href="index.html"><span class="logo-mark" data-logo="bisher"><img src="bilder/logo-zeichen.jpg" alt="" width="72" height="43"></span><span class="logo-mark" data-logo="ma-pastell"><img class="lm-flieder" src="bilder/logo-ma-flieder.png" alt="" height="36" width="76"><img class="lm-gruen" src="bilder/logo-ma-gruen.png" alt="" height="36" width="76"></span><span class="logo-mark" data-logo="kreis"><svg class="lm-flieder" viewBox="0 0 160 160" width="58" height="58" aria-hidden="true">
+      <circle cx="80" cy="78" r="66" fill="#EDE4F0" stroke="#5E4A6B" stroke-width="1.3"/>
+      <text x="80" y="96" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-weight="500" font-size="54" fill="#5E4A6B" letter-spacing="1">MA</text>
+      <path d="M96,138 C112,132 124,120 130,104" fill="none" stroke="#5E4A6B" stroke-width="1.1"/>
+      <path d="M0,0 C5,-7 15,-7 20,0 C15,7 5,7 0,0Z" transform="translate(104,134) rotate(-40) scale(0.75)" fill="#C6B1D3"/><path d="M0,0 C5,-7 15,-7 20,0 C15,7 5,7 0,0Z" transform="translate(116,124) rotate(-60) scale(0.8)" fill="#C6B1D3"/><path d="M0,0 C5,-7 15,-7 20,0 C15,7 5,7 0,0Z" transform="translate(125,112) rotate(-78) scale(0.7)" fill="#C6B1D3"/>
+      <path d="M0,0 C5,-7 15,-7 20,0 C15,7 5,7 0,0Z" transform="translate(108,132) rotate(30) scale(0.6)" fill="#C6B1D3"/><path d="M0,0 C5,-7 15,-7 20,0 C15,7 5,7 0,0Z" transform="translate(121,121) rotate(10) scale(0.6)" fill="#C6B1D3"/></svg><svg class="lm-gruen" viewBox="0 0 160 160" width="58" height="58" aria-hidden="true">
+      <circle cx="80" cy="78" r="66" fill="#DDEBDF" stroke="#4E6B56" stroke-width="1.3"/>
+      <text x="80" y="96" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-weight="500" font-size="54" fill="#4E6B56" letter-spacing="1">MA</text>
+      <path d="M96,138 C112,132 124,120 130,104" fill="none" stroke="#4E6B56" stroke-width="1.1"/>
+      <path d="M0,0 C5,-7 15,-7 20,0 C15,7 5,7 0,0Z" transform="translate(104,134) rotate(-40) scale(0.75)" fill="#A8C9AF"/><path d="M0,0 C5,-7 15,-7 20,0 C15,7 5,7 0,0Z" transform="translate(116,124) rotate(-60) scale(0.8)" fill="#A8C9AF"/><path d="M0,0 C5,-7 15,-7 20,0 C15,7 5,7 0,0Z" transform="translate(125,112) rotate(-78) scale(0.7)" fill="#A8C9AF"/>
+      <path d="M0,0 C5,-7 15,-7 20,0 C15,7 5,7 0,0Z" transform="translate(108,132) rotate(30) scale(0.6)" fill="#A8C9AF"/><path d="M0,0 C5,-7 15,-7 20,0 C15,7 5,7 0,0Z" transform="translate(121,121) rotate(10) scale(0.6)" fill="#A8C9AF"/></svg></span><span class="logo-mark" data-logo="blatt"><svg class="lm-flieder" viewBox="0 0 160 160" width="58" height="58" aria-hidden="true">
+      <path d="M26,136 C24,70 70,26 138,24 C140,92 96,136 26,136Z" fill="#C6B1D3"/>
+      <path d="M30,132 C62,100 96,66 132,30" fill="none" stroke="#EDE4F0" stroke-width="1.2" opacity=".9"/>
+      <text x="84" y="98" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-weight="600" font-size="40" fill="#5E4A6B" letter-spacing="1">MA</text></svg><svg class="lm-gruen" viewBox="0 0 160 160" width="58" height="58" aria-hidden="true">
+      <path d="M26,136 C24,70 70,26 138,24 C140,92 96,136 26,136Z" fill="#A8C9AF"/>
+      <path d="M30,132 C62,100 96,66 132,30" fill="none" stroke="#DDEBDF" stroke-width="1.2" opacity=".9"/>
+      <text x="84" y="98" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-weight="600" font-size="40" fill="#4E6B56" letter-spacing="1">MA</text></svg></span><span class="logo-mark" data-logo="schwung"><svg class="lm-flieder" viewBox="0 0 160 160" width="58" height="58" aria-hidden="true">
+      <circle cx="80" cy="80" r="70" fill="#EDE4F0"/>
+      <text x="64" y="108" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-weight="500" font-size="80" fill="#5E4A6B">M</text>
+      <text x="102" y="110" text-anchor="middle" font-family="'Parisienne', 'Brush Script MT', cursive" font-size="78" fill="#C6B1D3" opacity=".95">A</text></svg><svg class="lm-gruen" viewBox="0 0 160 160" width="58" height="58" aria-hidden="true">
+      <circle cx="80" cy="80" r="70" fill="#DDEBDF"/>
+      <text x="64" y="108" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-weight="500" font-size="80" fill="#4E6B56">M</text>
+      <text x="102" y="110" text-anchor="middle" font-family="'Parisienne', 'Brush Script MT', cursive" font-size="78" fill="#A8C9AF" opacity=".95">A</text></svg></span><span class="logo-mark" data-logo="geborgen"><svg class="lm-flieder" viewBox="0 0 160 160" width="58" height="58" aria-hidden="true">
+      <circle cx="74" cy="80" r="60" fill="#EDE4F0" stroke="#5E4A6B" stroke-width="1.3"/>
+      <circle cx="112" cy="106" r="30" fill="#C6B1D3" opacity=".85"/>
+      <text x="66" y="92" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-weight="500" font-size="40" fill="#5E4A6B" letter-spacing="1">MA</text></svg><svg class="lm-gruen" viewBox="0 0 160 160" width="58" height="58" aria-hidden="true">
+      <circle cx="74" cy="80" r="60" fill="#DDEBDF" stroke="#4E6B56" stroke-width="1.3"/>
+      <circle cx="112" cy="106" r="30" fill="#A8C9AF" opacity=".85"/>
+      <text x="66" y="92" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-weight="500" font-size="40" fill="#4E6B56" letter-spacing="1">MA</text></svg></span><span class="logo-mark" data-logo="stempel"><svg class="lm-flieder" viewBox="0 0 160 160" width="58" height="58" aria-hidden="true">
+      <defs><path id="ring-l229" d="M80,80 m-58,0 a58,58 0 1,1 116,0 a58,58 0 1,1 -116,0"/></defs>
+      <circle cx="80" cy="80" r="74" fill="none" stroke="#5E4A6B" stroke-width="1.3"/>
+      <circle cx="80" cy="80" r="44" fill="#EDE4F0"/>
+      <text font-family="'Nunito Sans', Arial, sans-serif" font-size="10.5" font-weight="600" fill="#5E4A6B" letter-spacing="2.2">
+        <textPath href="#ring-l229" startOffset="0" textLength="358" lengthAdjust="spacing">MASSAGE MOBIL · MOOSINNING UND UMGEBUNG ·</textPath></text>
+      <text x="80" y="92" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-weight="500" font-size="34" fill="#5E4A6B" letter-spacing="1">MA</text></svg><svg class="lm-gruen" viewBox="0 0 160 160" width="58" height="58" aria-hidden="true">
+      <defs><path id="ring-l230" d="M80,80 m-58,0 a58,58 0 1,1 116,0 a58,58 0 1,1 -116,0"/></defs>
+      <circle cx="80" cy="80" r="74" fill="none" stroke="#4E6B56" stroke-width="1.3"/>
+      <circle cx="80" cy="80" r="44" fill="#DDEBDF"/>
+      <text font-family="'Nunito Sans', Arial, sans-serif" font-size="10.5" font-weight="600" fill="#4E6B56" letter-spacing="2.2">
+        <textPath href="#ring-l230" startOffset="0" textLength="358" lengthAdjust="spacing">MASSAGE MOBIL · MOOSINNING UND UMGEBUNG ·</textPath></text>
+      <text x="80" y="92" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-weight="500" font-size="34" fill="#4E6B56" letter-spacing="1">MA</text></svg></span><span class="logo-txt"><b>Massage Mobil</b><span>Manuela Altmann · Mobile Massage für Frauen</span></span></a>
 <button class="menu-btn" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="nav"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
 <nav class="nav" id="nav">
 <a href="entspannung.html">Entspannung</a>
 <a href="mama-baby.html">Mama &amp; Baby</a>
 <a href="beratung.html">Beratung</a>
 <a href="gutscheine.html">Gutscheine</a>
+<a href="aktuelles.html">Aktuelles</a>
 <a href="ueber-mich.html">Über mich</a>
 <a href="kontakt.html">Kontakt</a>
 <a href="fragen.html" class="nav-fragen">Offene Fragen</a>
@@ -155,7 +198,47 @@ gemäß Art. 77 DSGVO das Recht, sich bei einer Aufsichtsbehörde zu beschweren.
 <footer class="site-footer">
 <div class="wrap">
 <div class="top">
-<div class="foot-brand"><img src="bilder/logo.jpg" alt="Logo Manuela Altmann, Mobile Wellnessmassagen" width="120" height="120"><div><div class="name">Massage Mobil</div><div>Manuela Altmann · 85452 Eichenried</div></div></div>
+<div class="foot-brand"><span class="logo-mark" data-logo="bisher"><img src="bilder/logo.jpg" alt="Logo Massage Mobil, Manuela Altmann" width="120" height="120"></span><span class="logo-mark foot-mark" data-logo="ma-pastell"><img class="lm-flieder" src="bilder/logo-ma-flieder.png" alt="" height="69" width="146"><img class="lm-gruen" src="bilder/logo-ma-gruen.png" alt="" height="69" width="146"></span><span class="logo-mark foot-mark" data-logo="kreis"><svg class="lm-flieder" viewBox="0 0 160 160" width="112" height="112" aria-hidden="true">
+      <circle cx="80" cy="78" r="66" fill="#EDE4F0" stroke="#5E4A6B" stroke-width="1.3"/>
+      <text x="80" y="96" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-weight="500" font-size="54" fill="#5E4A6B" letter-spacing="1">MA</text>
+      <path d="M96,138 C112,132 124,120 130,104" fill="none" stroke="#5E4A6B" stroke-width="1.1"/>
+      <path d="M0,0 C5,-7 15,-7 20,0 C15,7 5,7 0,0Z" transform="translate(104,134) rotate(-40) scale(0.75)" fill="#C6B1D3"/><path d="M0,0 C5,-7 15,-7 20,0 C15,7 5,7 0,0Z" transform="translate(116,124) rotate(-60) scale(0.8)" fill="#C6B1D3"/><path d="M0,0 C5,-7 15,-7 20,0 C15,7 5,7 0,0Z" transform="translate(125,112) rotate(-78) scale(0.7)" fill="#C6B1D3"/>
+      <path d="M0,0 C5,-7 15,-7 20,0 C15,7 5,7 0,0Z" transform="translate(108,132) rotate(30) scale(0.6)" fill="#C6B1D3"/><path d="M0,0 C5,-7 15,-7 20,0 C15,7 5,7 0,0Z" transform="translate(121,121) rotate(10) scale(0.6)" fill="#C6B1D3"/></svg><svg class="lm-gruen" viewBox="0 0 160 160" width="112" height="112" aria-hidden="true">
+      <circle cx="80" cy="78" r="66" fill="#DDEBDF" stroke="#4E6B56" stroke-width="1.3"/>
+      <text x="80" y="96" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-weight="500" font-size="54" fill="#4E6B56" letter-spacing="1">MA</text>
+      <path d="M96,138 C112,132 124,120 130,104" fill="none" stroke="#4E6B56" stroke-width="1.1"/>
+      <path d="M0,0 C5,-7 15,-7 20,0 C15,7 5,7 0,0Z" transform="translate(104,134) rotate(-40) scale(0.75)" fill="#A8C9AF"/><path d="M0,0 C5,-7 15,-7 20,0 C15,7 5,7 0,0Z" transform="translate(116,124) rotate(-60) scale(0.8)" fill="#A8C9AF"/><path d="M0,0 C5,-7 15,-7 20,0 C15,7 5,7 0,0Z" transform="translate(125,112) rotate(-78) scale(0.7)" fill="#A8C9AF"/>
+      <path d="M0,0 C5,-7 15,-7 20,0 C15,7 5,7 0,0Z" transform="translate(108,132) rotate(30) scale(0.6)" fill="#A8C9AF"/><path d="M0,0 C5,-7 15,-7 20,0 C15,7 5,7 0,0Z" transform="translate(121,121) rotate(10) scale(0.6)" fill="#A8C9AF"/></svg></span><span class="logo-mark foot-mark" data-logo="blatt"><svg class="lm-flieder" viewBox="0 0 160 160" width="112" height="112" aria-hidden="true">
+      <path d="M26,136 C24,70 70,26 138,24 C140,92 96,136 26,136Z" fill="#C6B1D3"/>
+      <path d="M30,132 C62,100 96,66 132,30" fill="none" stroke="#EDE4F0" stroke-width="1.2" opacity=".9"/>
+      <text x="84" y="98" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-weight="600" font-size="40" fill="#5E4A6B" letter-spacing="1">MA</text></svg><svg class="lm-gruen" viewBox="0 0 160 160" width="112" height="112" aria-hidden="true">
+      <path d="M26,136 C24,70 70,26 138,24 C140,92 96,136 26,136Z" fill="#A8C9AF"/>
+      <path d="M30,132 C62,100 96,66 132,30" fill="none" stroke="#DDEBDF" stroke-width="1.2" opacity=".9"/>
+      <text x="84" y="98" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-weight="600" font-size="40" fill="#4E6B56" letter-spacing="1">MA</text></svg></span><span class="logo-mark foot-mark" data-logo="schwung"><svg class="lm-flieder" viewBox="0 0 160 160" width="112" height="112" aria-hidden="true">
+      <circle cx="80" cy="80" r="70" fill="#EDE4F0"/>
+      <text x="64" y="108" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-weight="500" font-size="80" fill="#5E4A6B">M</text>
+      <text x="102" y="110" text-anchor="middle" font-family="'Parisienne', 'Brush Script MT', cursive" font-size="78" fill="#C6B1D3" opacity=".95">A</text></svg><svg class="lm-gruen" viewBox="0 0 160 160" width="112" height="112" aria-hidden="true">
+      <circle cx="80" cy="80" r="70" fill="#DDEBDF"/>
+      <text x="64" y="108" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-weight="500" font-size="80" fill="#4E6B56">M</text>
+      <text x="102" y="110" text-anchor="middle" font-family="'Parisienne', 'Brush Script MT', cursive" font-size="78" fill="#A8C9AF" opacity=".95">A</text></svg></span><span class="logo-mark foot-mark" data-logo="geborgen"><svg class="lm-flieder" viewBox="0 0 160 160" width="112" height="112" aria-hidden="true">
+      <circle cx="74" cy="80" r="60" fill="#EDE4F0" stroke="#5E4A6B" stroke-width="1.3"/>
+      <circle cx="112" cy="106" r="30" fill="#C6B1D3" opacity=".85"/>
+      <text x="66" y="92" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-weight="500" font-size="40" fill="#5E4A6B" letter-spacing="1">MA</text></svg><svg class="lm-gruen" viewBox="0 0 160 160" width="112" height="112" aria-hidden="true">
+      <circle cx="74" cy="80" r="60" fill="#DDEBDF" stroke="#4E6B56" stroke-width="1.3"/>
+      <circle cx="112" cy="106" r="30" fill="#A8C9AF" opacity=".85"/>
+      <text x="66" y="92" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-weight="500" font-size="40" fill="#4E6B56" letter-spacing="1">MA</text></svg></span><span class="logo-mark foot-mark" data-logo="stempel"><svg class="lm-flieder" viewBox="0 0 160 160" width="112" height="112" aria-hidden="true">
+      <defs><path id="ring-l239" d="M80,80 m-58,0 a58,58 0 1,1 116,0 a58,58 0 1,1 -116,0"/></defs>
+      <circle cx="80" cy="80" r="74" fill="none" stroke="#5E4A6B" stroke-width="1.3"/>
+      <circle cx="80" cy="80" r="44" fill="#EDE4F0"/>
+      <text font-family="'Nunito Sans', Arial, sans-serif" font-size="10.5" font-weight="600" fill="#5E4A6B" letter-spacing="2.2">
+        <textPath href="#ring-l239" startOffset="0" textLength="358" lengthAdjust="spacing">MASSAGE MOBIL · MOOSINNING UND UMGEBUNG ·</textPath></text>
+      <text x="80" y="92" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-weight="500" font-size="34" fill="#5E4A6B" letter-spacing="1">MA</text></svg><svg class="lm-gruen" viewBox="0 0 160 160" width="112" height="112" aria-hidden="true">
+      <defs><path id="ring-l240" d="M80,80 m-58,0 a58,58 0 1,1 116,0 a58,58 0 1,1 -116,0"/></defs>
+      <circle cx="80" cy="80" r="74" fill="none" stroke="#4E6B56" stroke-width="1.3"/>
+      <circle cx="80" cy="80" r="44" fill="#DDEBDF"/>
+      <text font-family="'Nunito Sans', Arial, sans-serif" font-size="10.5" font-weight="600" fill="#4E6B56" letter-spacing="2.2">
+        <textPath href="#ring-l240" startOffset="0" textLength="358" lengthAdjust="spacing">MASSAGE MOBIL · MOOSINNING UND UMGEBUNG ·</textPath></text>
+      <text x="80" y="92" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-weight="500" font-size="34" fill="#4E6B56" letter-spacing="1">MA</text></svg></span><div><div class="name">Massage Mobil</div><div>Manuela Altmann · 85452 Eichenried</div></div></div>
 <div><div><a href="tel:+4915158103579">0151 58103579</a> · auch per <a href="https://wa.me/4915158103579?text=Hallo%20Manuela%2C%20ich%20interessiere%20mich%20f%C3%BCr%20einen%20Massagetermin." target="_blank" rel="noopener">WhatsApp</a></div><div><a href="mailto:manuelaaltmann33@gmail.com">manuelaaltmann33@gmail.com</a></div></div>
 <div class="foot-links"><a href="aktuelles.html">Aktuelles &amp; Kurstermine</a><a href="partner.html">Partner</a><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div>
 </div>
@@ -164,8 +247,11 @@ gemäß Art. 77 DSGVO das Recht, sich bei einer Aufsichtsbehörde zu beschweren.
 </footer>
 <div class="mobile-bar"><a class="btn btn-primary" href="https://wa.me/4915158103579?text=Hallo%20Manuela%2C%20ich%20interessiere%20mich%20f%C3%BCr%20einen%20Massagetermin." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20l1.2-5.3A8.4 8.4 0 1 1 21 11.5z"/></svg>WhatsApp</a><a class="btn btn-outline" href="tel:+4915158103579"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Anrufen</a></div>
 <script>
+document.querySelectorAll('.farb-wahl button').forEach(x=>{const set=()=>document.querySelectorAll('.farb-wahl button').forEach(y=>y.setAttribute('aria-pressed',(document.documentElement.dataset.farbe||'flieder')===y.dataset.f));set();x.addEventListener('click',()=>{if(x.dataset.f==='gruen')document.documentElement.dataset.farbe='gruen';else delete document.documentElement.dataset.farbe;try{localStorage.setItem('farbe',x.dataset.f)}catch(e){}set()})});
+const ls=document.querySelector('.logo-wahl select');ls.value=document.documentElement.dataset.logo||'bisher';ls.addEventListener('change',()=>{if(ls.value==='bisher')delete document.documentElement.dataset.logo;else document.documentElement.dataset.logo=ls.value;try{localStorage.setItem('logo',ls.value)}catch(e){}});
 const b=document.querySelector('.menu-btn'),n=document.getElementById('nav');
 b.addEventListener('click',()=>{const o=n.classList.toggle('open');b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Menü schließen':'Menü öffnen')});
+document.querySelectorAll('.pw-btn').forEach(x=>x.addEventListener('click',()=>{document.getElementById('portraet').src=x.dataset.bild;document.querySelectorAll('.pw-btn').forEach(y=>{y.classList.toggle('an',y===x);y.setAttribute('aria-pressed',y===x)})}));
 </script>
 </body>
 </html>
